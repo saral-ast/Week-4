@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    let link = $("#w3s").attr("href");
+    console.log(link);
+    let newLink = "https://mail.google.com/mail/u/0/#inbox"
+
+    $("#w3s").attr("href", newLink);
+    let newLinkShow = $("#w3s").attr("href")
+    console.log(newLinkShow);
+    
+  });
+});
+</script>
+</head>
+<body>
+
+<p><a href="https://www.w3schools.com" id="w3s">W3Schools.com</a></p>
+
+<button>Show href Value</button>
+
+</body>
+</html>
