@@ -9,16 +9,21 @@ $(document).ready(function(){
       left: '+=250px',
       height: '+=150px',
       width: '+=150px'
-    });
+    },5000);
+    console.log($("div"))
   });
     $(".stop").click(function(){
         $("div").animate({
             height:'100px',
             width:'100px',
-            left: '0px'
-        });
+            left: '10px',
+            backgroundColor:'red',
+        },5000);    
     });
     
+    $("#stop").click(function(){
+        $("div").stop();
+    });
 });
 </script> 
 </head>
@@ -26,10 +31,13 @@ $(document).ready(function(){
 
 <button class="start">Start Animation</button>
 <button class="stop">Stop Animation</button>
+<button id="stop">stop</button>
 
 <p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
 
-<div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+<div style="background: rgb(82, 170, 82);height:100px;width:100px;position:absolute; overflow:hidden;">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, error.</p>
+</div>
 
 </body>
 </html>
