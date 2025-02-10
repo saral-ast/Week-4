@@ -1,41 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-</head>
-<body style="background-color: rgb(56, 56, 56); color: white;">
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body style="background-color: rgb(56, 56, 56); color: white">
     <h1 class="head">Hello ArsenalTech</h1>
     <button id="btn">Click Me</button>
-    <p class="para"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus eius praesentium aspernatur, ullam laudantium ea consequuntur consequatur minus accusantium! Inventore dolor incidunt laborum architecto adipisci dicta facere aperiam distinctio corrupti.</p>
-    <p class="para"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum pariatur possimus inventore esse. Nobis distinctio quos repudiandae eius tempora ab quaerat accusamus facilis placeat! Consequuntur aspernatur nobis inventore expedita nostrum. Id perferendis dicta quibusdam exercitationem at voluptatibus ipsum, corrupti atque deleniti, vel labore ut veritatis incidunt aliquid? Molestiae, quibusdam! Quod nemo quidem ut repellendus, ipsa natus officia provident voluptatum id, eum, consequatur aliquid distinctio cum suscipit adipisci itaque optio dolorum molestias temporibus unde libero maxime. Numquam provident doloribus magnam explicabo ipsam ut repellat soluta tempora ducimus ab nulla consequatur error incidunt quaerat unde dolorem id, dolore quisquam cum porro molestiae.</p>
+    <p class="para">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus eius
+      praesentium aspernatur, ullam laudantium ea consequuntur consequatur minus
+      accusantium! Inventore dolor incidunt laborum architecto adipisci dicta
+      facere aperiam distinctio corrupti.
+    </p>
+    <p class="para">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum pariatur
+      possimus inventore esse. Nobis distinctio quos repudiandae eius tempora ab
+      quaerat accusamus facilis placeat! Consequuntur aspernatur nobis inventore
+      expedita nostrum. Id perferendis dicta quibusdam exercitationem at
+      voluptatibus ipsum, corrupti atque deleniti, vel labore ut veritatis
+      incidunt aliquid? Molestiae, quibusdam! Quod nemo quidem ut repellendus,
+      ipsa natus officia provident voluptatum id, eum, consequatur aliquid
+      distinctio cum suscipit adipisci itaque optio dolorum molestias temporibus
+      unde libero maxime. Numquam provident doloribus magnam explicabo ipsam ut
+      repellat soluta tempora ducimus ab nulla consequatur error incidunt
+      quaerat unde dolorem id, dolore quisquam cum porro molestiae.
+    </p>
 
-    <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank" style="color: aliceblue;">Gmail</a>
+    <a
+      href="https://mail.google.com/mail/u/0/#inbox"
+      target="_blank"
+      style="color: aliceblue"
+      >Gmail</a
+    >
     <ul>
-        <li>Lorem ipsum dolor sit.</li>
-        <li>Lorem ipsum dolor sit.</li>
-        <li>Lorem, ipsum dolor.</li>
-        <li>Lorem ipsum dolor sit Lorem ipsum dolor sit amet.</li>
+      <li>Lorem ipsum dolor sit.</li>
+      <li>Lorem ipsum dolor sit.</li>
+      <li>Lorem, ipsum dolor.</li>
+      <li>Lorem ipsum dolor sit Lorem ipsum dolor sit amet.</li>
     </ul>
     <script>
-        $(document).ready(function() {
-        
-            $('#btn').dblclick(function() {
-                $('.head').hide();
-            });
-            $("p").dblclick(function(){
-                console.log(this)
-                $(this).hide();
-        
-            })
-            $(".head").click(function() {
-                console.log(this)
-                $(this).hide();
-            });
-        
-          /*  $("p.para").click(function() {
+      $(document).ready(function () {
+        $("#btn").dblclick(function () {
+          $(".head").hide();
+        });
+        $("p").dblclick(function () {
+          console.log(this);
+          $(this).hide();
+        });
+        $(".head").click(function () {
+          console.log(this);
+          $(this).hide();
+        });
+
+        /*  $("p.para").click(function() {
                 console.log(this)
                 alert(this.innerText)
                 // $(this).hide();
@@ -45,43 +69,42 @@
                 $(this).css("background-color", "pink");
             });*/
 
-            $("p.para").on({
-                    click: function() {
-                        console.log(this)
-                        alert(this.innerText)
-                        // $(this).hide();
-                    },
-                    mouseenter: function() {
-                        $(this).css("background-color", "blue" , "color" , "black");
-                    },
-                    mouseleave: function() {
-                        $(this).css("background-color", "pink");
-                    }
-                })
-        
-            $("[href]").click(function() {
-                console.log(this)
-                const url = confirm('Are you sure you want to visit this link?');
-                if(url){
-                    href = 'https://mail.google.com/mail/u/0/#inbox'
-                    console.log('You have visited the link')
-                }else{
-                    // href = 'http://127.0.0.1:5501/index.html'
-                    console.log('You have cancelled the visit')
-                }
-                // $(this).hide();
-            });
-           // $("html").mouseleave(function() {
-             //   alert("You are leaving the page");
-            // });
-            $("ul li").click(function() {
-                console.log(this)
-                $(this).hide();
-            });
+        $("p.para").on({
+          click: function () {
+            console.log(this);
+            alert(this.innerText);
+            // $(this).hide();
+          },
+          mouseenter: function () {
+            $(this).css("background-color", "blue", "color", "black");
+          },
+          mouseleave: function () {
+            $(this).css("background-color", "pink");
+          },
         });
-        
+
+        $("[href]").click(function () {
+          console.log(this);
+          const url = confirm("Are you sure you want to visit this link?");
+          if (url) {
+            href = "https://mail.google.com/mail/u/0/#inbox";
+            console.log("You have visited the link");
+          } else {
+            // href = 'http://127.0.0.1:5501/index.html'
+            console.log("You have cancelled the visit");
+          }
+          // $(this).hide();
+        });
+        // $("html").mouseleave(function() {
+        //   alert("You are leaving the page");
+        // });
+        $("ul li").click(function () {
+          console.log(this);
+          $(this).hide();
+        });
+      });
     </script>
 
     <script src="./jquery.js"></script>
-</body>
+  </body>
 </html>
